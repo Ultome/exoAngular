@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="text-center col">
+        <h1 class="h3">feature: component</h1>
+        <hr>
+    </div>
+</div>
+
+<div class="row pb-4">
+    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+        <table class="table table-hover table-striped table-bordered table-responsive-md table-sm">
+            <thead>
+                <tr>
+                    <th style="text-align: center;">Date</th>
+                    <th style="text-align: center;">Artiste</th>
+                    <th style="cursor: pointer; text-align: center;">Title</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let song of songs; let i = index;" class="table-{{ song.class }}">
+                    <td style="text-align: center; cursor: pointer;">{{ song.date }}</td>
+                    <td style="text-align: center; cursor: pointer;">{{ song.artist }}</td>
+                    <td style="text-align: center; cursor: pointer;">{{ song.title }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
